@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function validate()
+{
+if (document.myForm.name.value==""){
+alert("Please provide your name.");
+document.myForm.name.focus();
+return false;
+}
+if(document.myForm.country.value==""){
+alert("Please provide your country.");
+document.myForm.country.focus();
+return false;
+}
+
+
+if(document.myForm.email.value==""){
+alert("Please provide your EMail.");
+document.myForm.email.focus();
+return false;
+}
+if(document.myForm.date.value==""){
+alert("Please provide your date of travel.");
+document.myForm.date.focus();
+return false;
+}
+if(document.myForm.duration.value==""){
+alert("Please provide the duration of your tour .");
+document.myForm.duration.focus();
+return false;
+}
+if(document.myForm.package.value==""){
+alert("Please provide the package you have chosen.");
+document.myForm.package.focus();
+return false;
+}
+if(document.myForm.persons.value==""){
+alert("Please provide the \number of persons on this trip.");
+document.myForm.persons.focus();
+return false;
+}
+
+
+if(document.myForm.number.value==""||isNaN(document.myForm.number.value)||document.myForm.number.value.length!=10)
+{
+alert("Please provide zip in the format ##########.");
+document.myForm.number.focus();
+return false;}
+
+return(true);
+}
+</script>
+
+<style>
+h1{
+color:purple;
+font-size:45px;}
+
+
+
+body
+{border:3px solid;
+font-size:025px;
+padding:20px;
+
+font-weight:bold;
+
+}
+
+input[type="text"],input[type="number"],input[type="date"],input[type="email"]
+{
+width:60%;
+height:20px;
+}
+input[type="submit"]
+{
+width:200px;
+height:50px;
+font-size:25px;
+background-color:lightblue;
+
+
+}
+
+td{padding:10px;
+
+}
+l{
+position: absolute;
+top:98% ;
+left:45%;
+}
+
+</style>
+<h1><center><strong></strong><u>PLAN YOUR TRIPS</u></center></h1>
+
+<body bgcolor="violet" >
+
+<table  border="5"width="100%">
+<form action='connect.php' method="POST" name="myForm" onsubmit="return(validate());">
+<tr><td>Full name:</td>
+<td><input type="text" name="name" id="name"></td></tr>
+<tr><td>Country:</td>
+<td><input type="text" name="country" id="country"></td></tr>
+
+
+<tr><td>Email ID:</td>
+<td><input type="text" name="email" id="email" ></td></tr>
+
+
+<tr><td>Date of travel:</td>
+<td><input type="date" name="date" id="date" ></td></tr>
+<tr><td>Duration of the stay:</td>
+<td><input type="text" name="duration" id="duration" ></td></tr>
+
+<tr><td>Package:</td>
+<td><input type="text" name="package" id="package" >
+</td></tr>
+
+
+
+<tr><td>Number of persons:</td>
+<td><input type="number" name="persons" id="persons"  ></td></tr>
+
+
+
+<tr><td>Mobile number:</td>
+<td><input type="number" name="number" id="number"></td></tr>
+
+</table>
+<br><br><l><input type="submit" name="submit" id="submit"></l>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
